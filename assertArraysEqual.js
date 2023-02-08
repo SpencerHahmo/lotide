@@ -22,7 +22,11 @@ const assertArraysEqual = function(actual, expected, expectedResult) {
         console.log(`✅✅✅ Assertion Passed: ${actual} !== ${expected}\n`);
       }
     } else if (check !== expectedResult) {
-      console.log(`❌❌❌ Assertion Failed: ${actual} !== ${expected}\n`);
+      if (expectedResult === true) {
+        console.log(`❌❌❌ Assertion Failed: ${actual} !== ${expected}\n`);
+      } else {
+        console.log(`❌❌❌ Assertion Failed: ${actual} === ${expected}\n`);
+      }
     }
   }
 };
