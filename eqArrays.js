@@ -10,19 +10,15 @@ const eqArrays = function(actual, expected, expectedResult) {
   }
   if (expectedResult === undefined) {
     if (check === true) {
-      console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}\n`);
+      console.log("true");
     } else if (check === false) {
-      console.log(`❌❌❌ Assertion Failed: ${actual} !== ${expected}\n`);
+      console.log("false");
     }
   } else if (expectedResult !== undefined) {
     if (check === expectedResult) {
-      if (expectedResult === true) {
-        console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}\n`);
-      } else {
-        console.log(`✅✅✅ Assertion Passed: ${actual} !== ${expected}\n`);
-      }
+      console.log("true");
     } else if (check !== expectedResult) {
-      console.log(`❌❌❌ Assertion Failed: ${actual} !== ${expected}\n`);
+      console.log("false");
     }
   }
 };
