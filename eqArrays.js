@@ -6,7 +6,7 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-const eqArrays = function(actual, expected, expectedResult) {
+const eqArrays = function(actual, expected) {
   let check = false;
   for (let i = 0; i < actual.length; i++) {
     if (actual[i] === expected[i] && typeof actual[i] === typeof expected[i]) {
@@ -16,22 +16,12 @@ const eqArrays = function(actual, expected, expectedResult) {
       break;
     }
   }
-  if (expectedResult === undefined) {
-    if (check === true) {
-      console.log("true");
-      return true;
-    } else if (check === false) {
-      console.log("false");
-      return false;
-    }
-  } else if (expectedResult !== undefined) {
-    if (check === expectedResult) {
-      console.log("true");
-      return true;
-    } else if (check !== expectedResult) {
-      console.log("false");
-      return false;
-    }
+  if (check === true) {
+    console.log("true");
+    return true;
+  } else {
+    console.log("false");
+    return false;
   }
 };
 
