@@ -14,7 +14,6 @@ const without = function(source, itemsToRemove) {
   console.log(arrayOfValues);
 };
 
-
 without([1, 2, 3], [1]); // Should be [2, 3]
 without(["1", "2", "3"], [1, 2, "3"]); // Should be ["1", "2"]
 without(["Testing", "with", "nothing", "to", "remove"],[]);
