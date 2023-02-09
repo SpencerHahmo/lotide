@@ -23,4 +23,4 @@ without(["its", "over", "9000", false, 9001, "!", true], ["9000", false, true, u
 without(words, ["lighthouse"]); // no need to capture return value for this test case
 // Make sure the original array was not altered by the without function
 without(words, ["hello", "world", "lighthouse"]);
-without(["hello", "world", "lighthouse", "outstanding", "job"], words)
+without(["hello", "world", "lighthouse", "outstanding", "job"], words);
