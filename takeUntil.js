@@ -13,12 +13,19 @@ const eqArrays = (actual, expected) => {
 };
 
 const takeUntil = (array, callback) => {
-  let results = [];
-  for (let i = 0; i < array.length; i++) {
-    if (callback(array[i])) {
-      results = array.slice(0, i);
+  const results = [];
+
+  for (const item of array) {
+    if (callback(item)) {
+      return results;
     }
+    results.push(item);
   }
+  // for (let i = 0; i < array.length; i++) {
+  //   if (callback(array[i])) {
+  //     results = array.slice(0, i);
+  //   }
+  // }
   return results;
 };
 
