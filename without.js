@@ -2,15 +2,13 @@ const words = ["hello", "world", "lighthouse"];
 
 const without = function(source, itemsToRemove) {
   let arrayOfValues = [];
-  for (let i = 0; i < source.length; i++) {
-    arrayOfValues.push(source[i]);
-  }
-  for (let i = 0; i <= itemsToRemove.length; i ++) {
-    const removeIndex = arrayOfValues.indexOf(itemsToRemove[i]);
-    if (removeIndex > -1) {
-      arrayOfValues.splice(removeIndex, 1);
+
+  for (let element of source) {
+    if (!itemsToRemove.includes(element)) {
+      arrayOfValues.push(element);
     }
   }
+  
   console.log(arrayOfValues);
 };
 
