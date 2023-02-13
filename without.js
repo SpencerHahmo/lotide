@@ -1,15 +1,13 @@
 const words = ["hello", "world", "lighthouse"];
 
-const without = function(source, itemsToRemove) {
-  let arrayOfValues = [];
+const without = (source, itemsToRemove) => {
+  let formattedValues = [];
 
   for (let element of source) {
-    if (!itemsToRemove.includes(element)) {
-      arrayOfValues.push(element);
-    }
+    if (!itemsToRemove.includes(element)) formattedValues.push(element);
   }
   
-  console.log(arrayOfValues);
+  console.log(formattedValues);
 };
 
 without([1, 2, 3], [1]); // Should be [2, 3]
@@ -20,4 +18,4 @@ without(["its", "over", "9000", false, 9001, "!", true], ["9000", false, true, u
 without(words, ["lighthouse"]); // no need to capture return value for this test case
 // Make sure the original array was not altered by the without function
 without(words, ["hello", "world", "lighthouse"]);
-without(["hello", "world", "lighthouse", "outstanding", "job"], words);
+without(["hello", "lighthouse", "outstanding", "world", "job"], words);

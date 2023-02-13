@@ -16,9 +16,7 @@ const takeUntil = (array, callback) => {
   const results = [];
 
   for (const item of array) {
-    if (callback(item)) {
-      return results;
-    }
+    if (callback(item)) return results;
     results.push(item);
   }
   // for (let i = 0; i < array.length; i++) {
@@ -51,9 +49,8 @@ const data4 = [11, 5, 9, 15, 27, 86, 97, 31];
 const results4 = takeUntil(data4, x => x % 2 === 0);
 console.log(results4);
 
-assertArraysEqual(results1, data1.slice(0, 5));
-assertArraysEqual(results2, data2.slice(0, 4));
-assertArraysEqual(results3, ["another", "test", "example"]);
-assertArraysEqual(results4, ["11", "5", "9", "15", "27"]);
-assertArraysEqual(results4, data4.slice(0, 5));
-assertArraysEqual(results4, [11, 5, 9, 15, 27]);
+assertArraysEqual(results1, data1.slice(0, 5)); // should return assertion passed
+assertArraysEqual(results2, data2.slice(0, 4)); // should return assertion passed
+assertArraysEqual(results3, ["another", "test"]); // should return assertion failed
+assertArraysEqual(results4, ["11", "5", "9", "15", "27"]); // should return assertion failed
+assertArraysEqual(results4, data4.slice(0, 5)); // should return assertion passed

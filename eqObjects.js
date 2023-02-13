@@ -1,19 +1,13 @@
 const eqArrays = (actual, expected) => {
-  let check = false;
   for (let i = 0; i < actual.length; i++) {
-    if (actual[i] === expected[i] && typeof actual[i] === typeof expected[i]) check = true;
-    else {
-      check = false;
-      break;
-    }
+    if (!(actual[i] === expected[i] && typeof actual[i] === typeof expected[i])) return false;
   }
-  if (check === true) return true;
-  else return false;
+  return true;
 };
 
 const assertEqual = (actual, expected) => {
   if (actual === expected) console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  else if (actual !== expected) console.log(`❌❌❌ Assertion Failed: ${actual} !== ${expected}`);
+  else console.log(`❌❌❌ Assertion Failed: ${actual} !== ${expected}`);
 };
 
 const eqObjects = (object1, object2) => {

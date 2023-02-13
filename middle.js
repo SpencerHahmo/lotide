@@ -1,7 +1,7 @@
 const middle = (array) => {
   if (array.length <= 2) console.log([]);
-  else if (array.length % 2 === 0) console.log(array.slice(array.length / 2 - 1, array.length / 2 + 1));
-  else console.log(array.slice(array.length / 2, array.length / 2 + 1));
+  else if (array.length % 2 === 0) console.log(array.slice(Math.floor(array.length / 2 - 1), Math.floor(array.length / 2 + 1)));
+  else console.log(array.slice(Math.floor(array.length / 2), Math.floor(array.length / 2 + 1)));
 };
 
 middle([1]); // => []

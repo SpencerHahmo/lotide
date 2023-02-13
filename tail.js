@@ -1,31 +1,21 @@
-let arrayTail = undefined;
-let checker = false;
-
-const tail = function(array) {
-  if (array.length > 1) {
-    arrayTail = array.slice(1);
-  } else if (array.length === 1 || array.length === 0) {
-    arrayTail = undefined;
-  }
+const tail = (array) => {
+  if (array.length > 1) return array.slice(1);
+  else if (array.length === 1 || array.length === 0) return undefined;
 };
 
-const assertEqual = function(values, expectedValues) {
-  if (arrayTail === undefined) {
-    console.log(`❌❌❌ Tail Assertion Failed: ${arrayTail} !== ${expectedValues}`);
-  } else {
-    for (let i = 0; i < arrayTail.length; i++) {
-      if (arrayTail[i] === expectedValues[i]) {
-        checker = true;
-      } else if (arrayTail[i] !== expectedValues[i]) {
+const assertEqual = (actual, expected) => {
+  let checker = false;
+  if (actual === undefined) console.log(`❌❌❌ Assertion Failed: ${actual} !== ${expected}`);
+  else {
+    for (let i = 0; i < actual.length; i++) {
+      if (actual[i] === expected[i]) checker = true;
+      else if (actual[i] !== expected[i]) {
         checker = false;
         break;
       }
     }
-    if (checker === true) {
-      console.log(`✅✅✅ Tail Assertion Passed: ${arrayTail} === ${expectedValues}`);
-    } else if (checker === false) {
-      console.log(`❌❌❌ Tail Assertion Failed: ${arrayTail} !== ${expectedValues}`);
-    }
+    if (checker === true) console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
+    else console.log(`❌❌❌ Assertion Failed: ${actual} !== ${expected}`);
   }
 };
 

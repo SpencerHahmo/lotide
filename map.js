@@ -24,11 +24,9 @@ const map = (array, callback) => {
 
 const results1 = map(words, word => word[0]);
 const results2 = map(words, word => word);
-const results3 = map(words, word => word.slice(0, 1));
 const resultsLength = map(words, word => word.length);
 
 assertArraysEqual(results1, ["h", "e", "l", "l", "o"]);
 assertArraysEqual(results1, ['g', 'c', 't', 'm', 't']);
 assertArraysEqual(results2, ["ground", "control", "to", "major", "tom"]);
-assertArraysEqual(results3, ['g', 'c', 't', 'm', 't']);
 assertArraysEqual(resultsLength, [6, 7, 2, 5, 3]);
