@@ -1,7 +1,7 @@
 const assertEqual = require('./assertEqual');
 
 const head = (array) => {
-  if (array.length === undefined || array[0] === undefined) return undefined;
+  //if (array.length === undefined || array[0] === undefined) return undefined;
   return (array[0]);
   
   /* if (array.length !== undefined) return array[0];
