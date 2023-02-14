@@ -19,3 +19,5 @@ without(words, ["lighthouse"]); // no need to capture return value for this test
 // Make sure the original array was not altered by the without function
 without(words, ["hello", "world", "lighthouse"]);
 without(["hello", "lighthouse", "outstanding", "world", "job"], words);
+
+module.exports = without;

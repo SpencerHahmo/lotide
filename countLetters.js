@@ -16,3 +16,5 @@ console.log(countLetters("lighthouse in the house"));
 // countLetters("The FitnessGram™ Pacer Test");
 // countLetters("lighthouse in the house");
 // commented out lines can work in place of the lines above them
+
+module.exports = countLetters;

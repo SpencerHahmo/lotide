@@ -42,3 +42,5 @@ assertEqual(findKey({
   "Avatar": { rating: 75 },
   "Top Gun Maverick": { rating: 98 }
 }, x => x.rating > 95), "Top Gun Maverick");
+
+module.exports = findKey;

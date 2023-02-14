@@ -28,3 +28,5 @@ assertArraysEqual(letterPositions("Woohoo").o, [3]); // Should retrun false
 assertArraysEqual(letterPositions("Woohoo").W, [1]); // Should retrun true
 assertArraysEqual(letterPositions("lighthouse in the house").i, [1]); // Should return false
 assertArraysEqual(letterPositions("lighthouse in the house").h, [4]); // Should return false
+
+module.exports = letterPositions;

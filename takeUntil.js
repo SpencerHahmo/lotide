@@ -54,3 +54,5 @@ assertArraysEqual(results2, data2.slice(0, 4)); // should return assertion passe
 assertArraysEqual(results3, ["another", "test"]); // should return assertion failed
 assertArraysEqual(results4, ["11", "5", "9", "15", "27"]); // should return assertion failed
 assertArraysEqual(results4, data4.slice(0, 5)); // should return assertion passed
+
+module.exports = takeUntil;

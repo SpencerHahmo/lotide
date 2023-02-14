@@ -30,3 +30,5 @@ assertArraysEqual(results1, ["h", "e", "l", "l", "o"]);
 assertArraysEqual(results1, ['g', 'c', 't', 'm', 't']);
 assertArraysEqual(results2, ["ground", "control", "to", "major", "tom"]);
 assertArraysEqual(resultsLength, [6, 7, 2, 5, 3]);
+
+module.exports = map;
